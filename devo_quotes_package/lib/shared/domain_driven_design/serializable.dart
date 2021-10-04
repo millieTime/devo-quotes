@@ -6,8 +6,8 @@ import 'package:flutter/foundation.dart';
 /// serializable.dart
 /// bishopric-assistant
 ///
-/// Created by Po on 9/17/21
-/// Copyright 2021 Po. All rights reserved.
+/// Created by Porter McGary on 9/17/21
+/// Copyright 2021 Porter McGary.  All rights reserved.
 ///
 
 /// [Serializable] converts back and forth from JSON
