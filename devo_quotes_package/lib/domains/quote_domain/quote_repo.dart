@@ -6,4 +6,4 @@
 /// Copyright 2021 Porter McGary.  All rights reserved.
 ///
 
-mixin QuoteRePorter McGary{}
+mixin QuoteRepo {}

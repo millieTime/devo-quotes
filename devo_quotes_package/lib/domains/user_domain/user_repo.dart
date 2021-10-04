@@ -6,5 +6,4 @@
 /// Copyright 2021 Porter McGary.  All rights reserved.
 ///
 
-mixin UserRePorter McGary{
-}
+mixin UserRepo {}

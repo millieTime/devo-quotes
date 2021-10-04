@@ -14,7 +14,7 @@ mixin CreateQuoteFromTalkUseCase {
   Future<Result> execute();
 }
 
-class Defaultcreate_quote_from_talk implements CreateQuoteFromTalkUseCase {
+class DefaultCreateQuoteFromTalkUseCase implements CreateQuoteFromTalkUseCase {
   @override
   Future<Result> execute() {
     // TODO: implement

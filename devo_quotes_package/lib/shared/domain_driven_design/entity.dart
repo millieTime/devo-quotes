@@ -10,7 +10,6 @@ import 'package:flutter/foundation.dart';
 
 /// An [Entity], as explained in the DDD book.
 abstract class Entity<T> {
-
   /// Entities compare by identity, not by attributes.
   ///
   /// The [other] entity.
