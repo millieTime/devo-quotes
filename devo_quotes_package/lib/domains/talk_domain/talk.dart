@@ -1,4 +1,8 @@
+
+import 'package:devo_quotes_package/domains/talk_domain/transcript.dart';
+import 'package:devo_quotes_package/shared/talk_details.dart';
 import 'package:devo_quotes_package/shared/ddd.dart';
+import 'package:flutter/foundation.dart';
 
 ///
 /// talk.dart
@@ -14,6 +18,20 @@ import 'package:devo_quotes_package/shared/ddd.dart';
 /// - Date Given
 /// - Image
 class Talk extends Entity<Talk> {
+  final TalkDetails talk;
+  late final List<Transcript> _transcripts;
+
+  Talk({required this.talk, required List<Transcript> transcripts}) {
+    __transcripts = transcripts;
+  }
+
+  set __transcripts(List<Transcript> list) {
+    if (list.isEmpty) throw ErrorDescription("Empty List");
+    _transcripts = list;
+  }
+
+  List<Transcript> get transcripts => _transcripts;
+
   @override
   bool sameIdentityAs(Talk other) {
     // TODO: implement sameIdentityAs

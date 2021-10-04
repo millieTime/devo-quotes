@@ -1,3 +1,8 @@
+import 'package:async/async.dart';
+import 'package:flutter/foundation.dart';
+
+import 'tap.dart';
+
 ///
 /// tap_repo.dart
 /// devo-quotes
@@ -6,4 +11,10 @@
 /// Copyright 2021 Porter McGary.  All rights reserved.
 ///
 
-mixin TapRepo {}
+mixin TapRepo {
+  @required
+  Future<Result<bool>> store(Tap tap);
+
+  @required
+  Future<List<Tap>?> findAllByDate(DateTime datetime);
+}

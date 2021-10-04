@@ -11,3 +11,4 @@ export 'domains/talk_domain/talk_repo.dart';
 export 'domains/talk_domain/talk_with_tap.dart';
 export 'domains/talk_domain/transcript.dart';
 export 'domains/talk_domain/use_cases/get_talk.dart';
+export 'shared/talk_details.dart';

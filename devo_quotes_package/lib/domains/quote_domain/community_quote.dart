@@ -1,3 +1,7 @@
+import 'package:devo_quotes_package/shared/talk_details.dart';
+import 'package:devo_quotes_package/talk.dart';
+import 'package:flutter/foundation.dart';
+
 import 'quote.dart';
 
 ///
@@ -9,15 +13,33 @@ import 'quote.dart';
 ///
 
 class CommunityQuote extends Quote<CommunityQuote> {
+  late final int _taps;
+
+  CommunityQuote(
+      {required int taps,
+      required String context,
+      required TalkDetails talkDetails})
+      : super(context, talkDetails) {
+    __taps = taps;
+  }
+
+  set __taps(int taps) {
+    if (taps < 0) throw ErrorDescription("Invalid number of taps");
+    _taps = taps;
+  }
+
+  int get taps => _taps;
+
   @override
   bool sameIdentityAs(CommunityQuote other) {
-    // TODO: implement sameIdentityAs
-    throw UnimplementedError();
+    return this.quoteDetails == other.quoteDetails &&
+        this.context == other.context;
   }
 
   @override
   bool operator ==(Object other) {
-    // TODO: implement ==
-    return super == other;
+    if (other.runtimeType == CommunityQuote)
+      return sameIdentityAs(other as CommunityQuote);
+    return false;
   }
 }

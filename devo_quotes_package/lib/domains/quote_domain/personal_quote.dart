@@ -1,3 +1,6 @@
+import 'package:devo_quotes_package/domains/user_domain/user.dart';
+import 'package:devo_quotes_package/shared/talk_details.dart';
+
 import 'quote.dart';
 
 ///
@@ -9,15 +12,21 @@ import 'quote.dart';
 ///
 
 class PersonalQuote extends Quote<PersonalQuote> {
+  final User user;
+
+  PersonalQuote({required this.user, required String context, required TalkDetails quoteDetails})
+      : super(context, quoteDetails);
+
   @override
   bool sameIdentityAs(PersonalQuote other) {
-    // TODO: implement sameIdentityAs
-    throw UnimplementedError();
+    return this.quoteDetails == other.quoteDetails &&
+        this.context == other.context;
   }
 
   @override
   bool operator ==(Object other) {
-    // TODO: implement ==
-    return super == other;
+    if (other.runtimeType == PersonalQuote)
+      return sameIdentityAs(other as PersonalQuote);
+    return false;
   }
 }

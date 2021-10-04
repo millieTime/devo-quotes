@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 ///
 /// user.dart
 /// devo-quotes
@@ -8,4 +10,16 @@
 
 /// MUST HAVE
 /// - ID that is unique
-class User {}
+class User {
+  late final String _id;
+
+  User(String id) {
+    __id = id;
+  }
+
+  set __id(String id) {
+    if (id.isEmpty) throw ErrorDescription("Empty String");
+    _id = id;
+  }
+  String get id => _id;
+}

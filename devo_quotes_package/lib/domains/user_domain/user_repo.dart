@@ -6,4 +6,6 @@
 /// Copyright 2021 Porter McGary.  All rights reserved.
 ///
 
-mixin UserRepo {}
+mixin UserRepo {
+  Future<String?> getNewID();
+}

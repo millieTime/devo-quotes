@@ -1,5 +1,7 @@
 import 'package:devo_quotes_package/shared/ddd.dart';
 
+import '../../user.dart';
+
 ///
 /// tap.dart
 /// devo-quotes
@@ -12,6 +14,11 @@ import 'package:devo_quotes_package/shared/ddd.dart';
 /// - Time Stamp between 11:30 and 12:30 on a Tuesday
 /// - User
 class Tap extends Entity<Tap> {
+  final DateTime timeStamp;
+  final User user;
+
+  Tap({required this.user, required this.timeStamp});
+
   @override
   bool sameIdentityAs(Tap other) {
     // TODO: implement sameIdentityAs
