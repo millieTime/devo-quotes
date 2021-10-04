@@ -8,6 +8,11 @@ import 'package:devo_quotes_package/shared/ddd.dart';
 /// Copyright 2021 Porter McGary.  All rights reserved.
 ///
 
+/// MUST HAVE
+/// - Transcript
+/// - Author
+/// - Date Given
+/// - Image
 class Talk extends Entity<Talk> {
   @override
   bool sameIdentityAs(Talk other) {

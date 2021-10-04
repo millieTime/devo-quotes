@@ -8,6 +8,10 @@ import 'package:devo_quotes_package/shared/ddd.dart';
 /// Copyright 2021 Porter McGary.  All rights reserved.
 ///
 
+/// MUST HAVE
+/// - Start Time
+/// - End Time
+/// - Content
 class Transcript extends ValueObject<Transcript> {
   Transcript.decode(Map<String, dynamic> json) : super.decode(json);
 

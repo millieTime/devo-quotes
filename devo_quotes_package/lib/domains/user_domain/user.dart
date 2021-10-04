@@ -6,4 +6,6 @@
 /// Copyright 2021 Porter McGary.  All rights reserved.
 ///
 
+/// MUST HAVE
+/// - ID that is unique
 class User {}
